@@ -7,3 +7,4 @@ gradle_download_url: "https://services.gradle.org/distributions/{{ gradle_binary
 gradle_base_dir: /usr/local/share/
 gradle_extract_dir:  "gradle-{{ gradle_version }}"
 gradle_link: /usr/local/bin/gradle
+gradle_user_install: no

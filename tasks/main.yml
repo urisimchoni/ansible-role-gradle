@@ -18,6 +18,7 @@
     package:
       name: unzip
       state: latest
+    when: not gradle_user_install
 
   - name: "Ensure base dir exists"
     file:
