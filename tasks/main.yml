@@ -19,6 +19,11 @@
       name: unzip
       state: latest
 
+  - name: "Ensure base dir exists"
+    file:
+      path: "{{ gradle_base_dir }}"
+      state: directory
+
   - name: "Download"
     get_url:
       url: "{{ gradle_download_url }}"
@@ -30,6 +35,11 @@
       src: "{{ gradle_download }}"
       dest: "{{ gradle_base_dir }}"
       remote_src: True
+
+  - name: "Ensure symlink basedir exists"
+    file:
+      path: "{{ gradle_link | dirname }}"
+      state: directory
 
   - name: "Add gradle symlink to path"
     file:
