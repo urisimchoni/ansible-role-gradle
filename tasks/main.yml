@@ -35,8 +35,6 @@
     file:
       src: "{{ gradle_base_dir }}/{{ gradle_extract_dir }}/bin/gradle"
       dest: "{{ gradle_link }}"
-      owner: root
-      group: root
       state: link
 
   - name: "Validate Gradle version"
